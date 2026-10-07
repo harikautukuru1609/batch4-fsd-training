@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Weather & Travel Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>🌤️ Smart Weather & Travel Dashboard</h1>
+      <p>Check the weather and get smart travel suggestions</p>
+    </header>
+
+    <!-- Search -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name"
+        value="Chennai"
+      >
+
+      <button onclick="searchWeather()">
+        Search
+      </button>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading" class="loading">
+      Loading weather...
+    </div>
+
+    <!-- Error -->
+    <div id="error" class="error"></div>
+
+    <!-- Dashboard -->
+    <main id="dashboard">
+
+      <!-- Weather Card -->
+      <section class="weather-card">
+
+        <div class="location">
+          <h2 id="cityName">Chennai, IN</h2>
+          <p id="weatherDescription">Clear Sky</p>
+        </div>
+
+        <div class="weather-main">
+
+          <div class="weather-icon" id="weatherIcon">
+            ☀️
+          </div>
+
+          <div>
+            <div class="temperature" id="temperature">
+              32°C
+            </div>
+
+            <p>
+              Feels like
+              <strong id="feelsLike">39°C</strong>
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Weather Details -->
+        <div class="weather-details">
+
+          <div class="weather-detail">
+            <span>💧</span>
+            <strong id="humidity">72%</strong>
+            <small>Humidity</small>
+          </div>
+
+          <div class="weather-detail">
+            <span>💨</span>
+            <strong id="wind">2.52 m/s</strong>
+            <small>Wind Speed</small>
+          </div>
+
+          <div class="weather-detail">
+            <span>🌡️</span>
+            <strong id="pressure">1013 hPa</strong>
+            <small>Pressure</small>
+          </div>
+
+          <div class="weather-detail">
+            <span>👁️</span>
+            <strong id="visibility">10 km</strong>
+            <small>Visibility</small>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Travel Score -->
+      <section class="travel-score">
+
+        <h2>✈️ Travel Score</h2>
+
+        <div class="score-circle">
+          <span id="travelScore">85</span>
+          <small>/100</small>
+        </div>
+
+        <h3 id="travelStatus">
+          Good for Travel
+        </h3>
+
+        <p id="travelSummary">
+          The weather is suitable for travel.
+        </p>
+
+      </section>
+
+      <!-- Travel Recommendation -->
+      <section class="recommendation">
+
+        <h2>✈️ Travel Recommendation</h2>
+
+        <p id="recommendationText">
+          The weather looks good for travel.
+        </p>
+
+      </section>
+
+      <!-- Best Time -->
+      <section class="best-time">
+
+        <h2>🕐 Best Time for Outdoor Activities</h2>
+
+        <div class="time-box">
+
+          <div>
+            <span>🌅</span>
+            <h3>Morning</h3>
+            <p id="morningAdvice">
+              Good option
+            </p>
+          </div>
+
+          <div>
+            <span>🌇</span>
+            <h3>Evening</h3>
+            <p id="eveningAdvice">
+              Good option
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Activity -->
+      <section class="activity">
+
+        <h2>🚶 Outdoor Activity</h2>
+
+        <div class="activity-status" id="activityStatus">
+          👍 Suitable
+        </div>
+
+        <p id="activityAdvice">
+          Outdoor activities are possible.
+        </p>
+
+      </section>
+
+      <!-- Packing -->
+      <section class="packing">
+
+        <h2>🎒 What to Pack</h2>
+
+        <ul id="packingList">
+          <li>👕 Light clothes</li>
+          <li>🕶️ Sunglasses</li>
+          <li>🧴 Sunscreen</li>
+          <li>💧 Water bottle</li>
+        </ul>
+
+      </section>
+
+      <!-- Weather Alerts -->
+      <section class="alerts">
+
+        <h2>⚠️ Weather Alerts</h2>
+
+        <div id="alertsList">
+          <p>✅ No major weather warnings.</p>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
